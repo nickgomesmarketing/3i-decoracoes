@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>3i Decorações</title>
+<meta name="description" content="3i Decorações: móveis a pronta entrega para quarto, cozinha, sala e escritório. Escolha no catálogo e peça pelo WhatsApp.">
+<meta name="theme-color" content="#211D1A">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: vitrine de loja — catálogo em cartões no centro da página, cercado por promessa, prova e endereço; mesma família da ERS (Montserrat, cobre), tom mais leve e direto */
+:root{
+  --paper:#F7F4EF; --card:#FFFFFF; --stone:#ECE6DC; --ink:#211D1A; --muted:#6A625A; --line:#E0D8CC;
+  --copper:#B8702F; --copper-hi:#D9914F; --copper-soft:#F3E3D2; --dark:#211D1A; --on-dark:#F2EEE8; --on-dark-muted:#B5ADA4;
+  --wa:#1F8A4C;
+  --display:"Montserrat", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gut-l:max(20px, env(safe-area-inset-left, 0px)); --gut-r:max(20px, env(safe-area-inset-right, 0px));
+  --head:72px; --ease:cubic-bezier(.22,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 12px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.in{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em}
+h2{font-weight:600;font-size:clamp(28px,4vw,44px);line-height:1.1}
+h3{font-weight:600;font-size:18px;line-height:1.25;letter-spacing:-.01em}
+p{margin:0}
+.eyebrow{font:600 12px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+.lead{color:var(--muted);font-size:clamp(16px,1.6vw,18px);max-width:58ch;margin-top:14px}
+.shead{text-align:center;max-width:720px;margin:0 auto 40px}
+.shead .lead{margin-left:auto;margin-right:auto}
+.sec{padding-block:clamp(64px,9vw,104px)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 24px;font:600 14px var(--display);letter-spacing:.02em;text-decoration:none;white-space:nowrap;transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px -12px rgba(31,138,76,.7)}
+.btn.copper{background:var(--copper);color:#fff}
+.btn.line{border:1.5px solid var(--ink);background:transparent}
+.btn.sm{padding:10px 16px;font-size:13px}
+
+/* topo */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:rgba(247,244,239,.94)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(247,244,239,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .in{height:var(--head);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .mk{width:40px;height:40px;border-radius:10px;background:var(--dark);color:var(--copper-hi);display:grid;place-items:center;font:700 18px var(--display);letter-spacing:-.04em}
+.brand b{display:block;font:600 17px/1.05 var(--display);letter-spacing:-.01em}
+.brand small{display:block;font:500 10px/1.2 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-top:3px}
+.top nav{display:flex;gap:24px;font:500 14px var(--display)}
+.top nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.top nav a:hover{color:var(--ink)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{width:18px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:calc(var(--head) + env(safe-area-inset-top,0px)) 0 0;z-index:49;background:var(--paper);display:flex;flex-direction:column;padding:12px var(--gut-r) 32px var(--gut-l)}
+.mnav[hidden]{display:none}
+.mnav a{font:500 24px/1.2 var(--display);text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.mnav .btn{margin-top:24px;align-self:flex-start}
+@media (max-width:920px){.top nav,.top .btn{display:none}.burger{display:flex}}
+
+/* abertura */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(48px,7vw,88px)}
+.hero .in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center}
+.hero h1{font-weight:300;font-size:clamp(38px,5.6vw,68px);line-height:1.04;letter-spacing:-.03em}
+.hero h1 b{font-weight:700}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.seals{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.seal{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px 8px 10px;font:500 13px var(--display)}
+.seal i{width:22px;height:22px;border-radius:50%;background:var(--copper-soft);display:grid;place-items:center}
+.seal i svg{width:12px;height:12px;stroke:var(--copper);fill:none;stroke-width:2.5}
+.showcase{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.showcase .tile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 18px 40px -28px rgba(33,29,26,.35)}
+.showcase .tile.big{grid-row:span 2;justify-content:space-between}
+.showcase .tile .art{background:var(--stone);border-radius:12px;padding:14px;display:grid;place-items:center}
+.showcase .tile.big .art{flex:1;min-height:240px}
+.showcase .tile b{display:block;font:600 14px var(--display)}
+.showcase .tile small{display:block;color:var(--muted);font-size:13px}
+.flag{position:absolute;top:-12px;right:16px;background:var(--copper);color:#fff;font:600 11px var(--display);letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+@media (max-width:860px){.hero .in{grid-template-columns:minmax(0,1fr)}.showcase .tile.big .art{min-height:180px}}
+
+/* aviso de exemplo */
+.ex{display:inline-block;background:var(--copper-soft);color:#8A4E1C;font:600 10px var(--display);letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;border-radius:6px}
+
+/* catálogo */
+.catalog{background:var(--card);border-block:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:32px}
+.filters button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:9px 18px;font:500 14px var(--display);transition:all .2s}
+.filters button[aria-pressed="true"]{background:var(--dark);color:var(--on-dark);border-color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1040px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.prod{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s}
+.prod:hover{transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(33,29,26,.45)}
+.prod[hidden]{display:none}
+.prod .art{position:relative;background:var(--stone);aspect-ratio:1/1;max-width:100%;display:grid;place-items:center;padding:18%}
+.prod .art .ex{position:absolute;left:10px;top:10px}
+.prod .tag{position:absolute;right:10px;top:10px;background:var(--card);font:600 11px var(--display);padding:4px 8px;border-radius:6px;color:var(--muted)}
+.prod .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod .meas{color:var(--muted);font-size:13px}
+.dots{display:flex;gap:6px;align-items:center}
+.dots i{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.dots small{color:var(--muted);font-size:12px;margin-left:4px}
+.price{font:600 14px var(--display);color:var(--copper);margin-top:auto;padding-top:6px}
+.prod .btn{margin-top:6px;width:100%}
+@media (max-width:520px){.prod .body{padding:12px}.prod .btn{padding:10px 8px;font-size:12px}.prod h3{font-size:15px}}
+.custom{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--dark);color:var(--on-dark);border-radius:18px;padding:24px 28px}
+.custom p{color:var(--on-dark-muted);font-size:15px}
+.custom b{display:block;color:var(--on-dark);font:600 18px var(--display);margin-bottom:4px}
+
+/* diferenciais */
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.why{grid-template-columns:minmax(0,1fr)}}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.why svg{width:36px;height:36px;stroke:var(--copper);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why p{color:var(--muted);font-size:15px}
+
+/* como comprar */
+.how{background:var(--dark);color:var(--on-dark)}
+.how .eyebrow{color:var(--copper-hi)}
+.how .lead{color:var(--on-dark-muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}}
+.steps div{border:1px solid rgba(242,238,232,.14);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px;counter-increment:s}
+.steps div::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--copper);color:#fff;display:grid;place-items:center;font:600 18px var(--display);margin-bottom:6px}
+.steps p{color:var(--on-dark-muted);font-size:15px}
+.how .center{text-align:center;margin-top:36px}
+
+/* depoimentos */
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:860px){.revs{grid-template-columns:minmax(0,1fr)}}
+.rev{background:var(--card);border:1.5px dashed var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.stars{display:flex;gap:3px}
+.stars svg{width:18px;height:18px;fill:var(--stone)}
+.rev p{color:var(--muted);font-size:15px}
+.rev .who{display:flex;align-items:center;gap:10px;margin-top:auto}
+.rev .who i{width:40px;height:40px;border-radius:50%;background:var(--stone)}
+.rev .who b{font:600 14px var(--display)}
+.rev .who small{display:block;color:var(--muted);font-size:12px}
+
+/* localização */
+.loc .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,4vw,56px);align-items:center}
+@media (max-width:860px){.loc .in{grid-template-columns:minmax(0,1fr)}}
+.info{display:flex;flex-direction:column;gap:18px;margin-top:26px}
+.info div{display:flex;gap:14px}
+.info svg{width:24px;height:24px;stroke:var(--copper);fill:none;stroke-width:1.8;flex:none;margin-top:2px}
+.info b{display:block;font:600 15px var(--display)}
+.info span{color:var(--muted);font-size:15px}
+.loc .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;max-width:100%;background:#E4DED3;border:1px solid var(--line)}
+.map svg{width:100%;height:100%}
+.pin{position:absolute;left:50%;top:46%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px}
+.pin span{background:var(--dark);color:var(--on-dark);font:600 13px var(--display);padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.pin i{width:22px;height:22px;border-radius:50% 50% 50% 0;background:var(--copper);transform:rotate(-45deg);box-shadow:0 6px 14px -4px rgba(0,0,0,.4)}
+
+/* dúvidas */
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 22px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font:600 16px var(--display);display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--copper);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding-bottom:18px;font-size:15px}
+.faq a{color:var(--copper);font-weight:600}
+
+/* rodapé */
+footer{background:var(--dark);color:var(--on-dark-muted);padding-block:48px 32px;font-size:14px}
+footer .in{display:flex;flex-direction:column;gap:28px}
+footer .cols{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px}
+footer .brand b{color:var(--on-dark)}
+footer h4{margin:0 0 8px;font:600 11px var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark)}
+footer a{color:var(--on-dark-muted)}
+footer .ers{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid rgba(242,238,232,.14);padding-top:24px}
+footer .ers a{color:var(--copper-hi);font-weight:600}
+footer .proto{font-size:12px;opacity:.7}
+
+/* WhatsApp fixo */
+.fab{position:fixed;z-index:40;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,138,76,.7);transition:transform .25s var(--ease)}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:30px;height:30px;fill:#fff}
+
+/* revelação suave ao rolar, a partir de um estado já visível */
+.rv{transition:transform .7s var(--ease),opacity .7s var(--ease)}
+.rv.pre{transform:translateY(18px);opacity:.35}
+@media (prefers-reduced-motion:reduce){.rv{transition:none}.rv.pre{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></symbol>
+<symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></symbol>
+</defs></svg>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#inicio" aria-label="3i Decorações, início"><span class="mk">3i</span><span><b>3i Decorações</b><small>Pronta entrega</small></span></a>
+    <nav aria-label="Seções"><a href="#catalogo">Catálogo</a><a href="#como-comprar">Como comprar</a><a href="#depoimentos">Depoimentos</a><a href="#localizacao">Localização</a><a href="#duvidas">Dúvidas</a></nav>
+    <a class="btn wa sm" href="#" data-wa="Olá! Vim pelo site da 3i Decorações e quero ver os móveis a pronta entrega." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    <button type="button" class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu" hidden>
+  <a href="#catalogo">Catálogo</a><a href="#como-comprar">Como comprar</a><a href="#depoimentos">Depoimentos</a><a href="#localizacao">Localização</a><a href="#duvidas">Dúvidas</a>
+  <a class="btn wa" href="#" data-wa="Olá! Vim pelo site da 3i Decorações e quero ver os móveis a pronta entrega." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+</nav>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="in">
+      <div>
+        <p class="eyebrow">Móveis a pronta entrega</p>
+        <h1>Móveis prontos para a sua casa. <b>Sem esperar.</b></h1>
+        <p class="lead">Modelos para quarto, cozinha, sala e escritório, prontos para levar. Escolha no catálogo, chame no WhatsApp e receba em casa.</p>
+        <div class="ctas">
+          <a class="btn copper" href="#catalogo">Ver o catálogo</a>
+          <a class="btn wa" href="#" data-wa="Olá! Vim pelo site da 3i Decorações e quero ver os móveis a pronta entrega." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        </div>
+        <div class="seals">
+          <span class="seal"><i><svg viewBox="0 0 24 24"><use href="#ok"/></svg></i>Pronta entrega</span>
+          <span class="seal"><i><svg viewBox="0 0 24 24"><use href="#ok"/></svg></i>Entrega e montagem</span>
+          <span class="seal"><i><svg viewBox="0 0 24 24"><use href="#ok"/></svg></i>Pagamento facilitado</span>
+        </div>
+      </div>
+      <div class="showcase" aria-label="Destaques do catálogo">
+        <span class="flag">Destaques</span>
+        <div class="tile big"><div class="art" data-art="guarda"></div><div><b>Guarda-roupa 6 portas</b><small>Quarto · exemplo</small></div></div>
+        <div class="tile"><div class="art" data-art="rack"></div><div><b>Rack com painel</b><small>Sala · exemplo</small></div></div>
+        <div class="tile"><div class="art" data-art="cozinha"></div><div><b>Cozinha compacta</b><small>Cozinha · exemplo</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog sec" id="catalogo">
+    <div class="in">
+      <div class="shead rv">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Escolha o seu e chame no WhatsApp.</h2>
+        <p class="lead">Toque em “Quero esse” e a mensagem já vai com o nome do móvel. Medidas e cores conferidas no atendimento.</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por ambiente"></div>
+      <div class="grid" id="grid"></div>
+      <div class="custom rv">
+        <div><b>Precisa de algo sob medida?</b><p>Projetos planejados para o seu espaço, com a ERS Móveis Fortes.</p></div>
+        <a class="btn copper" href="https://ers.moveisfortes.com.br" target="_blank" rel="noopener">Conhecer a ERS Móveis Fortes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="in">
+      <div class="shead rv">
+        <p class="eyebrow">Por que comprar aqui</p>
+        <h2>Rápido de levar, feito para durar.</h2>
+      </div>
+      <div class="why rv">
+        <div><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg><h3>Pronta entrega</h3><p>Escolheu, está disponível. Sem esperar semanas de fabricação.</p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><h3>Entrega e montagem</h3><p>Levamos até você e deixamos o móvel montado e no lugar.</p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Qualidade garantida</h3><p>Materiais resistentes e acabamento conferido antes de sair.</p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><h3>Atendimento direto</h3><p>Fala com quem entende de móvel, pelo WhatsApp, sem robô.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how sec" id="como-comprar">
+    <div class="in">
+      <div class="shead rv">
+        <p class="eyebrow">Como comprar</p>
+        <h2>Em três passos.</h2>
+        <p class="lead">Sem cadastro e sem complicação.</p>
+      </div>
+      <div class="steps rv">
+        <div><h3>Escolha no catálogo</h3><p>Veja os modelos, as medidas e as cores disponíveis.</p></div>
+        <div><h3>Chame no WhatsApp</h3><p>Confirme o modelo, a cor, o valor e a forma de pagamento.</p></div>
+        <div><h3>Receba em casa</h3><p>Combinamos a entrega e deixamos tudo montado.</p></div>
+      </div>
+      <div class="center"><a class="btn wa" href="#" data-wa="Olá! Vim pelo site da 3i Decorações e quero fazer um pedido." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Fazer meu pedido</a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="depoimentos">
+    <div class="in">
+      <div class="shead rv">
+        <p class="eyebrow">Depoimentos</p>
+        <h2>Quem comprou, recomenda.</h2>
+        <p class="lead"><span class="ex">Espaço reservado</span> Aqui entram avaliações reais de clientes, do Google ou do Instagram.</p>
+      </div>
+      <div class="revs rv">
+        <div class="rev"><div class="stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>Depoimento real de cliente, com o móvel que comprou e como foi a entrega.</p><div class="who"><i></i><span><b>Nome do cliente</b><small>Bairro · Google</small></span></div></div>
+        <div class="rev"><div class="stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>Depoimento real de cliente, com o móvel que comprou e como foi a entrega.</p><div class="who"><i></i><span><b>Nome do cliente</b><small>Bairro · Instagram</small></span></div></div>
+        <div class="rev"><div class="stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>Depoimento real de cliente, com o móvel que comprou e como foi a entrega.</p><div class="who"><i></i><span><b>Nome do cliente</b><small>Bairro · Google</small></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="loc sec" id="localizacao" style="background:var(--card);border-block:1px solid var(--line)">
+    <div class="in">
+      <div class="rv">
+        <p class="eyebrow">Localização</p>
+        <h2>Venha ver de perto.</h2>
+        <p class="lead">Os móveis estão expostos na loja. Passe para ver as cores e o acabamento pessoalmente.</p>
+        <div class="info">
+          <div><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>Endereço</b>[Rua, número, bairro, cidade]</span></div>
+          <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Horário</b>[Segunda a sexta, 8h às 18h]</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><span><b>WhatsApp</b><span class="num">(19) 90000-0000</span></span></div>
+        </div>
+        <div class="ctas">
+          <a class="btn copper" href="https://www.google.com/maps/search/?api=1&amp;query=3i+Decora%C3%A7%C3%B5es" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn line" href="#" data-wa="Olá! Quero visitar a loja da 3i Decorações. Qual o melhor horário?" target="_blank" rel="noopener">Agendar visita</a>
+        </div>
+      </div>
+      <div class="map rv" aria-label="Mapa ilustrativo com a localização da loja">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="300" fill="#E4DED3"/>
+          <path d="M-10 210 L410 150" stroke="#FFFFFF" stroke-width="18"/>
+          <path d="M120 -10 L180 310" stroke="#FFFFFF" stroke-width="14"/>
+          <path d="M300 -10 L260 310" stroke="#FFFFFF" stroke-width="10"/>
+          <path d="M-10 70 L410 100" stroke="#FFFFFF" stroke-width="8"/>
+          <rect x="20" y="105" width="80" height="60" rx="6" fill="#D6CFC2"/>
+          <rect x="200" y="20" width="70" height="55" rx="6" fill="#D6CFC2"/>
+          <rect x="300" y="190" width="80" height="70" rx="6" fill="#CFD8C4"/>
+          <rect x="30" y="230" width="90" height="50" rx="6" fill="#D6CFC2"/>
+        </svg>
+        <div class="pin"><span>3i Decorações</span><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="duvidas">
+    <div class="in">
+      <div class="shead rv">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2>Antes de comprar.</h2>
+      </div>
+      <div class="faq rv">
+        <details><summary>Em quanto tempo recebo o móvel?</summary><p>Os modelos do catálogo são a pronta entrega. A data é combinada pelo WhatsApp, conforme a sua região.</p></details>
+        <details><summary>Vocês fazem a montagem?</summary><p>Sim. A entrega inclui a montagem do móvel no lugar escolhido.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary><p>As condições são passadas no atendimento pelo WhatsApp, junto com o valor do móvel escolhido.</p></details>
+        <details><summary>Posso ver o móvel antes de comprar?</summary><p>Pode. Os modelos ficam expostos na loja. Veja o endereço e o horário na seção Localização.</p></details>
+        <details><summary>E se eu precisar de um móvel sob medida?</summary><p>Aí o caminho é a <a href="https://ers.moveisfortes.com.br" target="_blank" rel="noopener">ERS Móveis Fortes</a>, que projeta e fabrica móveis planejados para o seu espaço.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <div class="cols">
+      <a class="brand" href="#inicio"><span class="mk">3i</span><span><b>3i Decorações</b><small>Pronta entrega</small></span></a>
+      <div><h4>Contato</h4><a href="#" data-wa="Olá! Vim pelo site da 3i Decorações." target="_blank" rel="noopener">WhatsApp <span class="num">(19) 90000-0000</span></a></div>
+      <div><h4>Loja</h4>[Endereço da loja]<br>[Horário de funcionamento]</div>
+    </div>
+    <div class="ers">
+      <span>Precisa sob medida? <a href="https://ers.moveisfortes.com.br" target="_blank" rel="noopener">Conheça a ERS Móveis Fortes</a></span>
+      <span class="proto">Versão 1 · produtos, depoimentos, endereço e WhatsApp são exemplos</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="#" data-wa="Olá! Vim pelo site da 3i Decorações e quero ver os móveis a pronta entrega." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const WHATS = "5519900000000"; // trocar pelo WhatsApp da loja
+const waLink = t => `https://wa.me/${WHATS}?text=${encodeURIComponent(t)}`;
+
+/* ilustrações dos móveis (provisórias, até chegarem as fotos reais) */
+const C = {wood:"#C79D6E", woodDk:"#9E7448", white:"#F4F2EE", gray:"#9A9EA0", dark:"#2E2B28", line:"#211D1A", fabric:"#C9BFB0"};
+const ART = {
+  guarda:(c=C.white,a=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="14" y="10" width="92" height="100" rx="2" fill="${c}" stroke="${C.line}" stroke-width="1.5"/>${[1,2,3,4,5].map(i=>`<line x1="${14+i*92/6}" y1="10" x2="${14+i*92/6}" y2="110" stroke="${C.line}" stroke-width="1.2"/>`).join("")}<rect x="14" y="10" width="92" height="16" fill="${a}" stroke="${C.line}" stroke-width="1.2"/>${[0,1,2].map(i=>`<rect x="${14+92/6*(i*2)+92/6-3}" y="56" width="2" height="16" fill="${C.line}"/><rect x="${14+92/6*(i*2)+92/6+1}" y="56" width="2" height="16" fill="${C.line}"/>`).join("")}<rect x="18" y="110" width="6" height="4" fill="${C.line}"/><rect x="96" y="110" width="6" height="4" fill="${C.line}"/></svg>`,
+  comoda:(c=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="16" y="34" width="88" height="70" rx="2" fill="${c}" stroke="${C.line}" stroke-width="1.5"/>${[0,1,2].map(r=>[0,1].map(k=>`<rect x="${20+k*42}" y="${38+r*21.5}" width="38" height="18" fill="${c}" stroke="${C.line}" stroke-width="1.1"/><rect x="${33+k*42}" y="${45+r*21.5}" width="12" height="2.4" rx="1" fill="${C.line}"/>`).join("")).join("")}<rect x="20" y="104" width="5" height="7" fill="${C.line}"/><rect x="95" y="104" width="5" height="7" fill="${C.line}"/></svg>`,
+  cabeceira:(c=C.fabric,a=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="24" y="30" width="72" height="48" rx="4" fill="${c}" stroke="${C.line}" stroke-width="1.5"/>${[1,2,3,4,5].map(i=>`<line x1="${24+i*12}" y1="32" x2="${24+i*12}" y2="76" stroke="${C.line}" stroke-opacity=".35"/>`).join("")}<rect x="4" y="62" width="18" height="30" fill="${a}" stroke="${C.line}" stroke-width="1.3"/><rect x="98" y="62" width="18" height="30" fill="${a}" stroke="${C.line}" stroke-width="1.3"/><line x1="4" y1="76" x2="22" y2="76" stroke="${C.line}"/><line x1="98" y1="76" x2="116" y2="76" stroke="${C.line}"/><rect x="24" y="74" width="72" height="22" fill="${C.white}" stroke="${C.line}" stroke-width="1.3"/></svg>`,
+  cozinha:(c=C.white,a=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="8" y="16" width="104" height="28" fill="${c}" stroke="${C.line}" stroke-width="1.4"/>${[1,2,3].map(i=>`<line x1="${8+i*26}" y1="16" x2="${8+i*26}" y2="44" stroke="${C.line}"/>`).join("")}<rect x="8" y="66" width="104" height="4" fill="${C.dark}"/><rect x="8" y="70" width="104" height="38" fill="${a}" stroke="${C.line}" stroke-width="1.4"/>${[1,2,3].map(i=>`<line x1="${8+i*26}" y1="70" x2="${8+i*26}" y2="108" stroke="${C.line}"/>`).join("")}<rect x="40" y="60" width="18" height="6" rx="1" fill="${C.gray}"/><line x1="49" y1="52" x2="49" y2="60" stroke="${C.gray}" stroke-width="2.5"/></svg>`,
+  balcao:(c=C.white,a=C.gray)=>`<svg viewBox="0 0 120 120"><rect x="14" y="46" width="92" height="5" fill="${C.dark}"/><rect x="14" y="51" width="92" height="52" fill="${c}" stroke="${C.line}" stroke-width="1.4"/><line x1="60" y1="51" x2="60" y2="103" stroke="${C.line}"/><line x1="83" y1="51" x2="83" y2="103" stroke="${C.line}"/><line x1="83" y1="68" x2="106" y2="68" stroke="${C.line}"/><line x1="83" y1="85" x2="106" y2="85" stroke="${C.line}"/><rect x="26" y="38" width="22" height="8" rx="1" fill="${a}"/><path d="M37 38 v-12 h8" stroke="${a}" stroke-width="2.5" fill="none"/></svg>`,
+  rack:(c=C.wood,a=C.white)=>`<svg viewBox="0 0 120 120"><rect x="14" y="14" width="92" height="80" fill="${a}" stroke="${C.line}" stroke-width="1.4"/><rect x="30" y="26" width="60" height="34" rx="1.5" fill="${C.dark}"/><rect x="10" y="78" width="100" height="22" fill="${c}" stroke="${C.line}" stroke-width="1.4"/><rect x="44" y="82" width="32" height="14" fill="${C.dark}" fill-opacity=".85"/><line x1="44" y1="78" x2="44" y2="100" stroke="${C.line}"/><line x1="76" y1="78" x2="76" y2="100" stroke="${C.line}"/><rect x="14" y="100" width="4" height="6" fill="${C.line}"/><rect x="102" y="100" width="4" height="6" fill="${C.line}"/></svg>`,
+  estante:(c=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="24" y="8" width="72" height="104" fill="${c}" stroke="${C.line}" stroke-width="1.5"/>${[1,2,3,4].map(i=>`<rect x="24" y="${8+i*20.8-1.5}" width="72" height="3" fill="${C.woodDk}"/>`).join("")}<line x1="60" y1="8" x2="60" y2="70" stroke="${C.line}"/><rect x="30" y="16" width="5" height="12" fill="#7B8A7A"/><rect x="36" y="18" width="4" height="10" fill="#B9774A"/><rect x="70" y="40" width="14" height="8" rx="4" fill="${C.white}"/><rect x="24" y="74" width="72" height="38" fill="${c}" stroke="${C.line}" stroke-width="1.3"/><line x1="60" y1="74" x2="60" y2="112" stroke="${C.line}"/></svg>`,
+  escrivaninha:(c=C.white,a=C.wood)=>`<svg viewBox="0 0 120 120"><rect x="8" y="50" width="104" height="6" fill="${a}" stroke="${C.line}" stroke-width="1.3"/><rect x="12" y="56" width="5" height="50" fill="${C.line}"/><rect x="78" y="56" width="30" height="50" fill="${c}" stroke="${C.line}" stroke-width="1.3"/>${[0,1,2].map(i=>`<line x1="78" y1="${72+i*16}" x2="108" y2="${72+i*16}" stroke="${C.line}"/><rect x="89" y="${62+i*16}" width="8" height="2" fill="${C.line}"/>`).join("")}<rect x="30" y="24" width="34" height="22" rx="1.5" fill="${C.dark}"/><rect x="45" y="46" width="4" height="4" fill="${C.dark}"/><rect x="8" y="14" width="104" height="4" fill="${a}" stroke="${C.line}"/></svg>`,
+  sapateira:(c=C.white)=>`<svg viewBox="0 0 120 120"><rect x="30" y="14" width="60" height="94" fill="${c}" stroke="${C.line}" stroke-width="1.5"/>${[1,2,3].map(i=>`<line x1="30" y1="${14+i*23.5}" x2="90" y2="${14+i*23.5}" stroke="${C.line}"/><rect x="54" y="${18+(i-1)*23.5}" width="12" height="2.4" rx="1" fill="${C.line}"/>`).join("")}<rect x="54" y="${18+3*23.5}" width="12" height="2.4" rx="1" fill="${C.line}"/></svg>`
+};
+const PRODUCTS = [
+  {id:"guarda6", room:"Quarto", art:"guarda", name:"Guarda-roupa 6 portas", meas:"240 × 55 × 220 cm", colors:[["#F4F2EE","Branco"],["#C79D6E","Freijó"]], tag:"Mais vendido"},
+  {id:"comoda", room:"Quarto", art:"comoda", name:"Cômoda 6 gavetas", meas:"100 × 45 × 90 cm", colors:[["#C79D6E","Freijó"],["#F4F2EE","Branco"]]},
+  {id:"cabeceira", room:"Quarto", art:"cabeceira", name:"Cabeceira com criados", meas:"190 × 30 × 110 cm", colors:[["#C9BFB0","Linho"],["#C79D6E","Freijó"]]},
+  {id:"sapateira", room:"Quarto", art:"sapateira", name:"Sapateira 4 portas", meas:"60 × 35 × 120 cm", colors:[["#F4F2EE","Branco"],["#9A9EA0","Cinza"]]},
+  {id:"cozinha", room:"Cozinha", art:"cozinha", name:"Cozinha compacta 4 peças", meas:"200 × 55 × 210 cm", colors:[["#F4F2EE","Branco"],["#C79D6E","Freijó"]], tag:"Novo"},
+  {id:"balcao", room:"Cozinha", art:"balcao", name:"Balcão de pia 120 cm", meas:"120 × 55 × 85 cm", colors:[["#F4F2EE","Branco"],["#9A9EA0","Cinza"]]},
+  {id:"rack", room:"Sala", art:"rack", name:"Rack com painel para TV", meas:"180 × 40 × 160 cm", colors:[["#C79D6E","Freijó"],["#2E2B28","Preto"]], tag:"Mais vendido"},
+  {id:"estante", room:"Sala", art:"estante", name:"Estante com portas", meas:"90 × 35 × 190 cm", colors:[["#C79D6E","Freijó"],["#F4F2EE","Branco"]]},
+  {id:"escrivaninha", room:"Escritório", art:"escrivaninha", name:"Escrivaninha com gaveteiro", meas:"120 × 50 × 75 cm", colors:[["#F4F2EE","Branco"],["#C79D6E","Freijó"]]}
+];
+document.querySelectorAll("[data-art]").forEach(el=>el.innerHTML=ART[el.dataset.art]());
+const grid=document.getElementById("grid");
+grid.innerHTML=PRODUCTS.map(p=>`<article class="prod" data-room="${p.room}">
+  <div class="art"><span class="ex">Exemplo</span>${p.tag?`<span class="tag">${p.tag}</span>`:""}${ART[p.art]()}</div>
+  <div class="body"><h3>${p.name}</h3><p class="meas">${p.meas}</p>
+  <div class="dots">${p.colors.map(c=>`<i style="background:${c[0]}" title="${c[1]}"></i>`).join("")}<small>${p.colors.map(c=>c[1]).join(" · ")}</small></div>
+  <p class="price">Consulte o valor</p>
+  <a class="btn wa sm" href="${waLink(`Olá! Vi no site da 3i Decorações e quero o ${p.name} (${p.meas}). Ainda tem disponível?`)}" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Quero esse</a></div></article>`).join("");
+const rooms=["Todos",...new Set(PRODUCTS.map(p=>p.room))];
+const filters=document.getElementById("filters");
+filters.innerHTML=rooms.map((r,i)=>`<button type="button" aria-pressed="${i===0}" data-r="${r}">${r}</button>`).join("");
+filters.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  filters.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  grid.querySelectorAll(".prod").forEach(p=>p.hidden=!(b.dataset.r==="Todos"||p.dataset.room===b.dataset.r));});
+document.querySelectorAll("[data-wa]").forEach(a=>a.href=waLink(a.dataset.wa));
+
+/* menu do celular */
+const burger=document.getElementById("burger"), mnav=document.getElementById("mnav");
+const setMenu=o=>{mnav.hidden=!o;burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Fechar menu":"Abrir menu");document.documentElement.style.overflow=o?"hidden":"";};
+burger.addEventListener("click",()=>setMenu(mnav.hidden));
+mnav.addEventListener("click",e=>{if(e.target.closest("a"))setMenu(false);});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!mnav.hidden)setMenu(false);});
+matchMedia("(min-width: 921px)").addEventListener("change",e=>{if(e.matches)setMenu(false);});
+
+/* revelação suave: só o que ainda está abaixo da tela começa recuado */
+if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");io.unobserve(en.target);}}),{rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".rv").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add("pre");io.observe(el);}});
+}
+</script>
+</body>
+</html>
